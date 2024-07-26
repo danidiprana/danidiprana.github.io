@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Web Page</title>
+    <script>
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                name: params.get('name'),
+                age: params.get('age')
+            };
+        }
+
+        // Function to set headings based on query parameters
+        function setHeadings() {
+            const { name, age } = getQueryParams();
+            document.getElementById('nameHeading').textContent = name ? name : 'Name';
+            document.getElementById('ageHeading').textContent = age ? age : 'Age';
+        }
+
+        // Set headings when the page loads
+        window.onload = setHeadings;
+    </script>
+</head>
+<body>
+    <h1 id="nameHeading">Name</h1>
+    <h2 id="ageHeading">Age</h2>
+</body>
+</html>
