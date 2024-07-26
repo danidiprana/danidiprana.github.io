@@ -15,8 +15,8 @@
         // Function to set headings based on query parameters
         function setHeadings() {
             const { name, table } = getQueryParams();
-            document.getElementById('nameHeading').textContent = name ? name: 'Name';
-            document.getElementById('tableHeading').textContent = table ? table : 'Table';
+            document.getElementById('nameHeading').textContent = name ? `Name: ${name}` : 'Name:';
+            document.getElementById('tableHeading').textContent = table ? `Table: ${table}` : 'Table:';
         }
 
         // Set headings when the page loads
@@ -24,7 +24,7 @@
     </script>
 </head>
 <body>
-    <h1 id="nameHeading">Name</h1>
-    <h2 id="tableHeading">Table</h2>
+    <h1 id="nameHeading">Name:</h1>
+    <h2 id="tableHeading">Table:</h2>
 </body>
 </html>
