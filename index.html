@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Web Page</title>
     <script>
         // Function to get query parameters
@@ -15,8 +17,8 @@
         // Function to set headings based on query parameters
         function setHeadings() {
             const { name, table } = getQueryParams();
-            document.getElementById('nameHeading').textContent = name ? `Name: ${name}` : 'Name:';
-            document.getElementById('tableHeading').textContent = table ? `Table: ${table}` : 'Table:';
+            document.getElementById('nameHeading').textContent = `Name: ${name || ''}`;
+            document.getElementById('tableHeading').textContent = `Table: ${table || ''}`;
         }
 
         // Set headings when the page loads
