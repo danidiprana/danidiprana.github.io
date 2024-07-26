@@ -8,15 +8,15 @@
             const params = new URLSearchParams(window.location.search);
             return {
                 name: params.get('name'),
-                age: params.get('age')
+                table: params.get('table')
             };
         }
 
         // Function to set headings based on query parameters
         function setHeadings() {
-            const { name, age } = getQueryParams();
-            document.getElementById('nameHeading').textContent = name ? name : 'Name';
-            document.getElementById('ageHeading').textContent = age ? age : 'Age';
+            const { name, table } = getQueryParams();
+            document.getElementById('nameHeading').textContent = name ? name: 'Name';
+            document.getElementById('tableHeading').textContent = table ? table : 'Table';
         }
 
         // Set headings when the page loads
@@ -25,6 +25,6 @@
 </head>
 <body>
     <h1 id="nameHeading">Name</h1>
-    <h2 id="ageHeading">Age</h2>
+    <h2 id="tableHeading">Table</h2>
 </body>
 </html>
